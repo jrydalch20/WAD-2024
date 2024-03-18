@@ -51,7 +51,10 @@
 		
 		<div class='container'>
 			<button type='button' class='btn btn-danger btn-sm'>Remove this property from list?</button>
+			<button type='button' class='btn btn-light btn-sm'>Update Property Details</button>
 		</div>
+		
+
 	
 	
 	</body>
