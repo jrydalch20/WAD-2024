@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `employee`;
 CREATE TABLE IF NOT EXISTS `employee` (
   `EmployeeID` smallint UNSIGNED NOT NULL AUTO_INCREMENT,
   `Username` varchar(30) NOT NULL,
-  `Password` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Password` varchar(250) NOT NULL,
   `LastName` varchar(30) NOT NULL,
   `FirstName` varchar(30) NOT NULL,
   `Position` varchar(30) NOT NULL,
@@ -176,7 +176,7 @@ DROP TABLE IF EXISTS `renter`;
 CREATE TABLE IF NOT EXISTS `renter` (
   `RenterID` int UNSIGNED NOT NULL AUTO_INCREMENT,
   `Username` varchar(30) NOT NULL,
-  `Password` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `Password` varchar(250)  NOT NULL,
   `LastName` varchar(30) NOT NULL,
   `FirstName` varchar(30) NOT NULL,
   `EmailAdd` varchar(50) NOT NULL,
@@ -201,7 +201,7 @@ INSERT INTO `renter` (`RenterID`, `Username`, `Password`, `LastName`, `FirstName
 DROP TABLE IF EXISTS `statuses`;
 CREATE TABLE IF NOT EXISTS `statuses` (
   `StatusID` tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
-  `StatusName` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `StatusName` varchar(20)  NOT NULL,
   PRIMARY KEY (`StatusID`)
 ) ENGINE=MyISAM  ;
 
