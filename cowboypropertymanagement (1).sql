@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `cowboypropertymanagement`
 --
-CREATE DATABASE IF NOT EXISTS `cowboypropertymanagement` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `cowboypropertymanagement`  ;
 USE `cowboypropertymanagement`;
 
 -- --------------------------------------------------------
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `EmailAdd` varchar(50) NOT NULL,
   `PhoneNum` varchar(15) NOT NULL,
   PRIMARY KEY (`EmployeeID`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3  ;
 
 --
 -- Dumping data for table `employee`
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `emp_property` (
   `EmployeeID` smallint UNSIGNED NOT NULL,
   PRIMARY KEY (`PropertyID`,`EmployeeID`),
   KEY `EmployeeID` (`EmployeeID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `lease` (
   PRIMARY KEY (`LeaseID`),
   KEY `UnitID` (`UnitID`),
   KEY `EmployeeID` (`EmployeeID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `lease_renter` (
   `LeaseID` int UNSIGNED NOT NULL,
   PRIMARY KEY (`RenterID`,`LeaseID`),
   KEY `LeaseID` (`LeaseID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -114,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `maintenance` (
   PRIMARY KEY (`MaintenanceID`),
   KEY `UnitID` (`UnitID`),
   KEY `StatusID` (`StatusID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `maint_emp` (
   `EmployeeID` smallint UNSIGNED NOT NULL,
   PRIMARY KEY (`MaintenanceID`,`EmployeeID`),
   KEY `EmployeeID` (`EmployeeID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   KEY `LeaseID` (`LeaseID`),
   KEY `EmployeeID` (`EmployeeID`),
   KEY `RenterID` (`RenterID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `property` (
   `State` char(2) NOT NULL,
   `Zip` varchar(10) NOT NULL,
   PRIMARY KEY (`PropertyID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `renter` (
   `EmailAdd` varchar(50) NOT NULL,
   `PhoneNum` varchar(15) NOT NULL,
   PRIMARY KEY (`RenterID`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8  ;
 
 --
 -- Dumping data for table `renter`
@@ -203,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `statuses` (
   `StatusID` tinyint UNSIGNED NOT NULL AUTO_INCREMENT,
   `StatusName` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`StatusID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 -- --------------------------------------------------------
 
@@ -221,7 +221,7 @@ CREATE TABLE IF NOT EXISTS `unit` (
   `Price` decimal(9,2) NOT NULL,
   PRIMARY KEY (`UnitID`),
   KEY `PropertyID` (`PropertyID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM  ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
