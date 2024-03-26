@@ -1,0 +1,40 @@
+/* This file are custom classes that are universal to all pages within the web application.
+Other custom styles that might be more page specific will be found either in the html file or on a separate style sheet
+*/
+
+body {
+	font-family: Arial;
+}
+.custom-footer {
+				background-color: #c7b599;
+				padding: 20px;
+				width: 100%;
+			}
+			
+.custom-navbar {
+	background-color: #744700;
+}
+.custom-navbar-item {
+	color: white;
+	font-weight: bold;
+	
+}
+
+.custom-navbar-item:hover {
+	color: #c7b599;
+	font-weight: bold;
+}
+
+.custom-btn1 {
+	background-color: #744700;
+	color: white;
+}
+.custom-btn1:hover {
+	background-color: #c7b599;
+}
+.custom-rounded-container {
+	border: 2px solid #744700;
+	border-radius: 10px;
+	padding: 10px;
+	
+}
